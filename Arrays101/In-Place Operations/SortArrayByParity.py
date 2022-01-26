@@ -23,12 +23,10 @@ test_cases = [
 
 class Solution:
     def sortArrayByParity(self, nums: List[int]) -> List[int]:
-        i = 0
         for i in range(len(nums) - 1, -1, -1):
             if nums[i] % 2 != 0:
                 nums.append(nums.pop(i))
             i += 1
-        print(nums)
         return nums
 
 
